@@ -2,10 +2,10 @@ package com.google.Arrays;
 
 public class ReverseArray {
 	
-	public void reverse(int[] arr)
+	public void reverse(int[] arr,int num)
 	{
 		
-		int start=0;
+		int start=num+1;
 		int end=arr.length-1;
 		while(start<=end)
 		{
@@ -25,9 +25,9 @@ public class ReverseArray {
 	
 	public static void main(String[] args)
 	{
-		int[] array= {34,44,1,2,5};
+		int[] array= {34,44,1,2,5,6};
 		ReverseArray rev=new ReverseArray();
-		rev.reverse(array);
+		rev.reverse(array,3);
 	}
 
 }

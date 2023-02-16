@@ -28,18 +28,19 @@ public class MinMax {
 		return min;
 	}
 	
-	public void arraySort(int[] arr)
+	public void arraySort(int[] arr,int K)
 	{
 		Arrays.sort(arr);
-		System.out.println("Maximum value: "+arr[arr.length-1]);
-		System.out.println("Minimum value: "+arr[0]);
+		System.out.println("Maximum "+K+ " value : "+arr[arr.length-K]);
+		System.out.println("Minimum "+K+" value: "+arr[K-1]);
 	}
 	
 	public static void main(String[] args)
 	{
 		int[] array= {90,89,445,67,87};
+		//1,2 3,7,9,19 len=6 k=2
 		MinMax max=new MinMax();
 		System.out.println("Maximun element is: "+max.maxArray(array));
-		max.arraySort(array);
+		max.arraySort(array,2);
 	}
 }
