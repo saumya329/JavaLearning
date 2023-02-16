@@ -1,6 +1,6 @@
 package com.google.Oops.Inheritance;
 
-public class TShirt extends Brand {
+public class TShirt extends Cloth {
 	Size size;
 
 	public TShirt(String cloth_type) {

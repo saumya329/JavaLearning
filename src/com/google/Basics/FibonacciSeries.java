@@ -1,25 +1,37 @@
 package com.google.Basics;
 
-public class FibonacciSeries {
-	static int num1=0, num2=1, num3;
-	public static void printFib(int count)
-	{
-		if(count>0)
-		{
-			num3=num1+num2;
-			num1=num2;
-			num2=num3;
-			System.out.print(" "+num3);
-			printFib(count-1);
-		}
-	}
-	
-	
-	public static void main(String[] args)
-	{
-		int count=20;
-		System.out.print(num1+" "+num2);
-		printFib(count-2);
+import java.util.HashMap;
+import java.util.Map;
 
-     }
+public class FibonacciSeries {
+	
+int[] table=new int[100];
+//Map<Integer, Integer> table=new HashMap<Integer, Integer>();
+	public int printFib(int count) {
+		if (count <= 1) {
+			return 1;
+		}
+		
+		if(table[count-1]==0)
+		{
+			 table[count - 1] =printFib(count-1);
+		}
+		if(table[count-2]==0)
+		{
+			 table[count - 2] =printFib(count-2);
+		}
+		
+		return table[count-1]+table[count-2];
+
+		
+
+	}
+
+	public static void main(String[] args) {
+		
+		FibonacciSeries fib = new FibonacciSeries();
+
+		System.out.println(fib.printFib(10));
+
+	}
 }

@@ -9,6 +9,7 @@ public class Brand extends Cloth
 		this.ClothMaterial =ClothMaterial;
 		}
 	
+	
 	public void brandAvailable()
 	{
 		switch (ClothMaterial) {
