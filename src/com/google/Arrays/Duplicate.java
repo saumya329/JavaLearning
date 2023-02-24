@@ -1,6 +1,7 @@
 package com.google.Arrays;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map.Entry;
 import java.util.Set;
 
@@ -48,7 +49,21 @@ public class Duplicate {
 		}
 		
 	}
+	
+	public void hashSetDuplicate(int[] arr)
+	{
+		HashSet<Integer> set=new HashSet<>();
+		for(int element:arr)
+		{
+			if(! set.add(element))
+			{
+				System.out.println(element);
+			}
+		}
+		
+	}
 
+	
 	public static void main(String[] args)
 	{
 		int[] array= {2,6,5,2,2,3,1,3,11};
@@ -56,6 +71,8 @@ public class Duplicate {
 		duplicates.duplicate(array);
 		System.out.println("Identifying using HashMap");
 		duplicates.hashMapDuplicate(array);
+		System.out.println("Identifying using HashSet");
+		duplicates.hashSetDuplicate(array);
 	}
 
 }

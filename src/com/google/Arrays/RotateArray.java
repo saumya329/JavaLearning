@@ -16,11 +16,11 @@ public class RotateArray {
 	    	 i++;
 	    	 rotatingPoint++;
 	     }
-	     System.out.println("First Split");
+	     //System.out.println("First Split");
 	     rotatingPoint=0;
 	     while(rotatingPoint<K)
 	     {
-	    	 System.out.println("Processing second split");
+	    	 //System.out.println("Processing second split");
 	    	 outputArray[i]=arr[rotatingPoint];
 	    	 i++;
 	    	 rotatingPoint++;
